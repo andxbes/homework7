@@ -5,9 +5,11 @@
  */
 package ua.skillsupbes.homework7w.controller.entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -17,12 +19,22 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "PERFORMANCE_PERTICIPANTS")
 public class PerformanceParticipans {
-       @Id
-   @Column(name = "ID")    
+
+    @Id
+    @OneToOne(targetEntity = Student.class)
+    @JoinColumn(name = "STUDENT_ID")
     private Student student_id;
 
-    
-    @Column(name = "PERFORMANCE_ID")
-    private Integer performance_id;
+    @ManyToOne(targetEntity = Performance.class)
+    @JoinColumn(name = "PERFORMANCE_ID")
+    private Performance performance_id;
 
+    @Override
+    public String toString() {
+	return "";
+		}
+
+   
+
+    
 }

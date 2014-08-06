@@ -6,9 +6,12 @@
 
 package ua.skillsupbes.homework7w.controller.entities;
 
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -18,11 +21,13 @@ import javax.persistence.Table;
 @Entity
 @Table()
 public class Performance {
-      @Id
+    @Id
     @Column(name = "ID")    
     private Integer id;
 
-  
-    @Column(name = "COMPOSITION_ID")
-    private Integer composition_id;
+    @OneToMany(targetEntity = Composition.class)
+    @JoinColumn(name = "COMPOSITION_ID")
+    private List<Composition> composition_id;
+    
+    
 }
