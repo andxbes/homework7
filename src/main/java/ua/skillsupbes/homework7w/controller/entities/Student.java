@@ -10,6 +10,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -24,8 +26,9 @@ public class Student {
     @Column(name = "ID")
     private Integer id;
     
-    @Column(name = "INSTRUMENT_ID")
-    private Integer instrument_id;
+    @ManyToOne(targetEntity = Instrument.class)
+    @JoinColumn(name = "INSTRUMENT_ID")
+    private Instrument instrument_id;
     
     @Column(name = "FIRST_NAME")
     private String firstName;

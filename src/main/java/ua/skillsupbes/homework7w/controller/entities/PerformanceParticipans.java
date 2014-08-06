@@ -28,13 +28,5 @@ public class PerformanceParticipans {
     @ManyToOne(targetEntity = Performance.class)
     @JoinColumn(name = "PERFORMANCE_ID")
     private Performance performance_id;
-
-    @Override
-    public String toString() {
-	return "";
-		}
-
-   
-
     
 }
