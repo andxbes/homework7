@@ -10,8 +10,6 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -24,8 +22,6 @@ public class Student {
 
     @Id
     @Column(name = "ID")
-    @OneToOne(targetEntity = PerformanceParticipans.class)
-    @JoinColumn(name = "STUDENT_ID")
     private Integer id;
     
     @Column(name = "INSTRUMENT_ID")

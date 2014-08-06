@@ -9,8 +9,6 @@ package ua.skillsupbes.homework7w.controller.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -21,8 +19,7 @@ import javax.persistence.Table;
 @Table(name = "COMPOSITION")
 public class Compopsition {
     @Id
-    @OneToOne(targetEntity = Performance.class)
-    @JoinColumn(name = "ID")    
+    @Column(name = "ID")    
     private Integer id;
 
     
@@ -31,5 +28,6 @@ public class Compopsition {
     
     @Column(name = "AUTHOR")
     private String author;
+    
     
 }
