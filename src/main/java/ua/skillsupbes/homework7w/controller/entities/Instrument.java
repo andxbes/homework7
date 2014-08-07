@@ -24,7 +24,7 @@ public class Instrument {
     @Id
     Integer id ;
     
-    @Column(name = "TYPE")
+    @Column(name = "TYPE_")
     String type ;
     
     @Column(name = "PRODUCER")
@@ -36,6 +36,6 @@ public class Instrument {
     @Column(name = "PURCH_DATE")
     Date purchDate;
 
-  
+    
     
 }

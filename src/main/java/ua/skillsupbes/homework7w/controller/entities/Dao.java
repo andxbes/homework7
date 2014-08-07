@@ -19,8 +19,8 @@ public class Dao {
     @Autowired
     private SessionFactory sessionFactory;
     
-    public void deleInstrument(Student s){
-    
-    }
+//    public void deleInstrument(Student s){
+//    
+//    }
     
 }

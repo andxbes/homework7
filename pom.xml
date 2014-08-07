@@ -118,7 +118,20 @@
 		  <configuration>
 		   <encoding>${project.build.sourceEncoding}</encoding>
 		  </configuration>
+                  
 		 </plugin>
+                  <!-- include test.java =)) -->
+                 <plugin>
+                     <artifactId>maven-surefire-plugin</artifactId>
+                     <version>2.17</version>
+                     <configuration>
+                         <includes>
+                             
+                             <include>**/*IT.java</include>
+                         
+                         </includes>
+                     </configuration>
+                 </plugin>
 		</plugins>
 	</build>
 </project>

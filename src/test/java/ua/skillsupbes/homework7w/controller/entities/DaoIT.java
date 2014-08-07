@@ -8,21 +8,29 @@ package ua.skillsupbes.homework7w.controller.entities;
 
 import org.junit.After;
 import org.junit.AfterClass;
-import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  *
  * @author Andrey
  */
 public class DaoIT {
-    
+    private  Dao dao;
     public DaoIT() {
+	System.out.println("\nhohoho\n");
+	ApplicationContext context =
+		new ClassPathXmlApplicationContext("/app-context.xml");
+	   // dao = (Dao) context.getBean("dao");
+	
     }
+    
     
     @BeforeClass
     public static void setUpClass() {
+	
     }
     
     @AfterClass
@@ -43,11 +51,12 @@ public class DaoIT {
     @org.junit.Test
     public void testDeleInstrument() {
 	System.out.println("deleInstrument");
-	Student s = null;
-	Dao instance = new Dao();
-	instance.deleInstrument(s);
+	
+
+	
+	//instance.deleInstrument(s);
 	// TODO review the generated test code and remove the default call to fail.
-	fail("The test case is a prototype.");
+	//fail("The test case is a prototype.");
     }
     
 }

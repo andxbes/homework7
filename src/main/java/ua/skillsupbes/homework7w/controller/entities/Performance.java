@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author Andr
  */
 @Entity
-@Table()
+@Table(name = "PERFORMANCE")
 public class Performance {
     @Id
     @Column(name = "ID")    
